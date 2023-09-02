@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Version>1.8.0.*</Version>
+    <Authors>The Fabulous Cube</Authors>
+    <Description>Adds the ability to easily color Console output</Description>
+    <AssemblyVersion>1.8.0.1</AssemblyVersion>
+    <FileVersion>1.8.0.1</FileVersion>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>TheFabulousCube.$(AssemblyName)</PackageId>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <Product>$(AssemblyName) for $(TargetFramework) </Product>
+  </PropertyGroup>
+	<ItemGroup>
+  <Content Include="readme.md">
+    <Pack>true</Pack>
+    <PackagePath>\</PackagePath>
+    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+	<ItemGroup>
+	  <None Update="readme.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
