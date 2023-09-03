@@ -8,7 +8,7 @@ namespace ConsoleColors
 {
 
     /// <summary>
-    /// 
+    /// Makes adding color to your console output easier!
     /// </summary>
     public static class Color
     {
@@ -122,7 +122,7 @@ namespace ConsoleColors
         /// </summary>
         /// <param name="text"></param>
         /// <param name="background"></param>
-        /// <returns></returns>
+        /// <returns>Formatted string</returns>
         public static string Black(string text, ConsoleColor? background = null)
         {
             string thisColor = "Black";
@@ -576,7 +576,7 @@ namespace ConsoleColors
 
         /// <summary>
         /// String Extention method <br/>
-        /// 
+        /// The string is underlined
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
@@ -611,18 +611,42 @@ namespace ConsoleColors
         }
 
         /// <summary>
-        /// 
+        /// Convenience method for 'Success' messages <br/>
+        /// Displays green on dark green background<br/>
         /// </summary>
-        public static void Demo()
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string Success(string text)
         {
-            for (int i = 1; i <= 107; i++)
-            {
-                Console.WriteLine($"\u001B[{i}m   This line is using code {i} to print.  How do you like it?    \u001B[0m");
-            }
-            var test = Color.WithBlack("string");
+            string thisColor = "Green";
+            return BuildCodes(text, thisColor, ConsoleColor.DarkGreen);
         }
 
-        static readonly Dictionary<string, int> Foreground = new()
+        /// <summary>
+        /// Convenience method for 'Warning' messages <br/>
+        /// Displays yellow on dark yellow background<br/>
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns>formatted string</returns>
+        public static string Warning(string text)
+        {
+            string thisColor = "Yellow";
+            return BuildCodes(text, thisColor, ConsoleColor.DarkYellow);
+        }
+
+        /// <summary>
+        /// Convenience method for 'Failure' messages <br/>
+        /// Displays red on dark red background<br/>
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string Failure(string text)
+        {
+            string thisColor = "Red";
+            return BuildCodes(text, thisColor, ConsoleColor.DarkRed);
+        }
+
+        static readonly Dictionary<string, int> Foreground = new Dictionary<string, int>()
         {
         {"Black", 30},
         {"DarkRed", 31},
@@ -641,7 +665,7 @@ namespace ConsoleColors
         {"Cyan", 96},
         {"White", 97 }
         };
-        static readonly Dictionary<string, int> Background = new()
+        static readonly Dictionary<string, int> Background = new Dictionary<string, int>()
         {
         {"Black", 40},
         {"DarkRed", 41},

@@ -2,17 +2,32 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Version>1.8.0.*</Version>
+    <Version>1.8.0.6</Version>
     <Authors>The Fabulous Cube</Authors>
     <Description>Adds the ability to easily color Console output</Description>
-    <AssemblyVersion>1.8.0.1</AssemblyVersion>
-    <FileVersion>1.8.0.1</FileVersion>
+    <AssemblyVersion>1.8.0.6</AssemblyVersion>
+    <FileVersion>1.8.0.6</FileVersion>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>TheFabulousCube.$(AssemblyName)</PackageId>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <Product>$(AssemblyName) for $(TargetFramework) </Product>
+    <SignAssembly>False</SignAssembly>
+    <Title>Cube's Console Colors</Title>
+    <Copyright>Copyright (c) The Fabulous Cube 2023</Copyright>
+    <PackageProjectUrl>https://github.com/TheFabulousCube/CubesConsoleColors</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheFabulousCube/CubesConsoleColors</RepositoryUrl>
+    <PackageTags>console color; console colour; the fabulous cube;</PackageTags>
+    <PackageReleaseNotes>Initial release
+Color.RGB() is still experimental</PackageReleaseNotes>
+    <PackageIcon>image20.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
 	<ItemGroup>
   <Content Include="readme.md">
     <Pack>true</Pack>
@@ -20,6 +35,12 @@
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
 </ItemGroup>
+	<ItemGroup>
+	  <None Include="C:\temp\image20.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 	<ItemGroup>
 	  <None Update="readme.md">
 	    <Pack>True</Pack>
