@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Version>1.8.0.6</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.8.1</Version>
     <Authors>The Fabulous Cube</Authors>
     <Description>Adds the ability to easily color Console output</Description>
-    <AssemblyVersion>1.8.0.6</AssemblyVersion>
-    <FileVersion>1.8.0.6</FileVersion>
+    <AssemblyVersion>1.8.1</AssemblyVersion>
+    <FileVersion>1.8.1</FileVersion>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>TheFabulousCube.$(AssemblyName)</PackageId>
@@ -17,10 +17,11 @@
     <Copyright>Copyright (c) The Fabulous Cube 2023</Copyright>
     <PackageProjectUrl>https://github.com/TheFabulousCube/CubesConsoleColors</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheFabulousCube/CubesConsoleColors</RepositoryUrl>
-    <PackageTags>console color; console colour; the fabulous cube;</PackageTags>
+    <PackageTags>console color; console colour; the fabulous cube; colors; colours; colorful; console;</PackageTags>
     <PackageReleaseNotes>Initial release
 Color.RGB() is still experimental</PackageReleaseNotes>
     <PackageIcon>image20.png</PackageIcon>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -42,6 +43,10 @@ Color.RGB() is still experimental</PackageReleaseNotes>
 	  </None>
 	</ItemGroup>
 	<ItemGroup>
+	  <None Update="LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	  <None Update="readme.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>

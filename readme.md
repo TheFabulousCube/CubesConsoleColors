@@ -1,5 +1,10 @@
 ﻿# Cube's Console Colors makes adding color to your console output easier!
 
+![logo](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/image20.png)
+
+[![NuGet](https://img.shields.io/nuget/dt/TheFabulousCube.ConsoleColors.svg)](https://www.nuget.org/packages/TheFabulousCube.ConsoleColors)
+[![NuGet](https://img.shields.io/nuget/v/TheFabulousCube.ConsoleColors.svg)](https://www.nuget.org/packages/TheFabulousCube.ConsoleColors)
+
 Tired of long boring walls of scrolling text? Need to call attention to something important?  
 Adding a splash of color to your console output makes important events stand out!
 
@@ -102,30 +107,31 @@ You can freely mix and match as much as you want:
 ### There are also some styling methods included
 
 Support for ANSI escape codes around styling is a little spotty. They may or may not work well for your application. The 'bold' feature really only works well on dark colors, and all it does is translate them to the lighter version of the same color.  
-**Bold**:
+**Bold**:  
 `Console.WriteLine(Color.DarkCyan($" The {Color.Bold(" bold feature ")} really only works on dark colors, it just changes them to the {"light".WithBold()} version"));`
 
 `Console.WriteLine(Color.Magenta($" The {Color.Bold("bold feature")} doesn't show any difference for already light colors"));`  
 ![example for bolded text](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/bold.PNG)
 
-**Underline**:
+**Underline**:  
 `Console.WriteLine($" The {Color.Underline("underline")} can be used for emphasis.  There are {"both formats".WithUnderline()} of the styling methods");`  
 ![Example of underlined text](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/underline.PNG)
 
-**Inverse**: (swaps the background and foreground colors, kinda neat!)
+**Inverse**: (swaps the background and foreground colors, kinda neat!)  
 `Console.WriteLine($" You can {Color.Invert(" invert a section of text ")} in a line");`  
 ![Example of inverted text](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/invert.PNG)
 
-Convenience methods:
-Success, writes green on dark green background:
+### Convenience methods:
+
+Success, writes green on dark green background:  
 `Console.WriteLine($" The operation was a {Color.Success("success")}, please proceed");`  
 ![Success text with green on dark green background](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/success.PNG)
 
-Warning, writes yellow on dark yellow background:
+Warning, writes yellow on dark yellow background:  
 `Console.WriteLine($" Trouble {Color.Warning("parsing file")}, you may want to check results");`  
 ![Warning text with yellow on dark yellow background](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/warning.PNG)
 
-Failure, writes red on dark red background:
+Failure, writes red on dark red background:  
 `Console.WriteLine($" Parsing the arguments {Color.Failure("failed")}, check the logs");`  
 ![Failure text with red on dark red background](https://raw.githubusercontent.com/TheFabulousCube/CubesConsoleColors/master/img/failure.PNG)
 
