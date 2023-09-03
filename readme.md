@@ -35,7 +35,7 @@ This is limited to the standard ConsoleColors
 
 ### Not enough colors?
 
-There's a Color.RGB() method that takes in the string to color, followed by red, green, and blue values. If you know the hexadecimal, prefix it with "0x"
+There's a Color.RGB() method that takes in the string to color, followed by red, green, and blue values. If you know the hexadecimal, prefix it with "0x"  
 `Console.WriteLine(Color.RGB("Let's try something new!", 255, 45, 45));`  
 `Console.WriteLine(Color.RGB("Let's try something new!", 0x2d, 0xff, 0x2d));`
 `Console.WriteLine(Color.RGB("Let's try something new!", 45, 45, 255));`  
