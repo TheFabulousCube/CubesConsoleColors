@@ -68,7 +68,7 @@ namespace ConsoleColors
         {
             ConsoleColor currentForeground = Console.ForegroundColor;
             ConsoleColor currentBackground = Console.BackgroundColor;
- 
+
             int thisForeground = Foreground[fore];
             int thisBackground = Background[back.ToString()];
 
@@ -84,7 +84,7 @@ namespace ConsoleColors
                     codes[i] = codes[i][..m].Replace(thatForeground.ToString(), thisForeground.ToString()) + codes[i][m..];
                 }
             }
-            string rejoined = String.Join('\u001b',codes);
+            string rejoined = String.Join('\u001b', codes);
 
             code = $"\u001B[{thisForeground};{thisBackground}m{rejoined}\u001B[{thatForeground};{thatBackground}m";
             return (code);
@@ -104,7 +104,7 @@ namespace ConsoleColors
         }
 
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// Set the background by passing it in
         /// </summary>
         /// <param name="str"></param>
@@ -310,7 +310,7 @@ namespace ConsoleColors
             return BuildCodes(text, thisColor, background ?? Console.BackgroundColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a black background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"black".WithBlack()} highlighting");
@@ -323,7 +323,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark red background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark red".WithDarkRed()} highlighting");
@@ -336,7 +336,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark green background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark green".WithDarkGreen()} highlighting");
@@ -349,7 +349,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark yellow background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark yellow".WithDarkYellow()} highlighting");
@@ -362,7 +362,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark blue background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark blue".WithDarkBlue()} highlighting");
@@ -375,7 +375,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark magenta background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark magenta".WithDarkMagenta()} highlighting");
@@ -388,7 +388,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark cyan background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark cyan".WithDarkCyan()} highlighting");
@@ -401,7 +401,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a dark gray background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"dark gray".WithDarkGray()} highlighting");
@@ -414,7 +414,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a gray background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"gray".WithGray()} highlighting");
@@ -427,7 +427,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a red background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"red".WithRed()} highlighting");
@@ -440,7 +440,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a green background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"green".WithGreen()} highlighting");
@@ -453,7 +453,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a yellow background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"yellow".WithYellow()} highlighting");
@@ -466,7 +466,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a blue background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"blue".WithBlue()} highlighting");
@@ -479,7 +479,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a magenta background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"magenta".WithMagenta()} highlighting");
@@ -492,7 +492,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a cyan background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"cyan".WithCyan()} highlighting");
@@ -505,7 +505,7 @@ namespace ConsoleColors
             return BuildCodes(text, Console.ForegroundColor.ToString(), thisColor);
         }
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string has a white background<br/>
         /// May be nested for a highlight: <br/>
         /// Console.WriteLine($"This line has{"white".WithWhite()} highlighting");
@@ -530,7 +530,7 @@ namespace ConsoleColors
         }
 
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// Inverts the colors <br/>
         /// i.e. the background and foreground are swapped for this string
         /// </summary>
@@ -553,7 +553,7 @@ namespace ConsoleColors
         }
 
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// Displays colors in bold style <br/>
         /// This really only works for the dark colors, which display as the bright versions
         /// </summary>
@@ -575,7 +575,7 @@ namespace ConsoleColors
         }
 
         /// <summary>
-        /// String Extention method <br/>
+        /// String extension method <br/>
         /// The string is underlined
         /// </summary>
         /// <param name="s"></param>
