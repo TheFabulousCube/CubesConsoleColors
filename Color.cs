@@ -77,14 +77,14 @@ namespace ConsoleColors
             var codes = text.Split('\u001b');
             for (int i = 1; i < codes.Length; i++)
             {
-                if (codes[i].Contains('m'))
+                if (codes[i].Contains("m"))
                 {
                     int m = codes[i].IndexOf('m');
-                    codes[i] = codes[i][..m].Replace(thatBackground.ToString(), thisBackground.ToString()) + codes[i][m..];
-                    codes[i] = codes[i][..m].Replace(thatForeground.ToString(), thisForeground.ToString()) + codes[i][m..];
+                    codes[i] = codes[i].Substring(0, m).Replace(thatBackground.ToString(), thisBackground.ToString()) + codes[i].Substring(m);
+                    codes[i] = codes[i].Substring(0, m).Replace(thatForeground.ToString(), thisForeground.ToString()) + codes[i].Substring(m);
                 }
             }
-            string rejoined = String.Join('\u001b', codes);
+            string rejoined = String.Join("\u001b", codes);
 
             code = $"\u001B[{thisForeground};{thisBackground}m{rejoined}\u001B[{thatForeground};{thatBackground}m";
             return (code);
